@@ -1,33 +1,20 @@
-#include<stdio.h>
-int main()
-{
-    char _operator ;
-    float num1, num2;
-
-    printf("Enter an operator (+, -, *, /): ");
-    scanf("%c", &_operator);
-    printf("Enter two operands: ");
-    scanf("%f %f", &num1, &num2);
-    switch(_operator){
-    		case '+':
-    	printf("sum is %f+%f=%f\n",num1,num2,num1+num2);
-    	break;
-    	 	case '-':
-    	printf("difference is %f-%f=%f\n",num1,num2,num1-num2);
-    	break;
-    		case '*':
-    	printf("product is %f*%f=%f\n",num1,num2,num1*num2);
-    	break;
-    		case '/':
-    		if(num2 !=0){
-    			printf("divission %f/%f=%f\n",num1,num2,num1/num2);
-			}
-    	else{
-    		printf("Error");
-		}
-         default:
-         	printf("Thanks");
-	}
-    	return 0;
-	}
-
+#include <stdio.h>
+int main(){
+	int num,temp,remainder,reverse=0;
+	printf("Enter a number");
+	scanf("%d",&num);
+	 temp =num;
+	 while(num!=0){
+	 	remainder=num%10;
+	 	reverse=reverse*10+remainder;
+	 	num=num/10;
+	 }
+	 printf("Given no is %d\n",temp);
+	  printf("Reversed no is %d\n",reverse);
+	  if(temp==reverse){
+	  	printf("The no is a palindrome\n");
+	  	}else printf("The no is not a palindrome");
+	  	
+	  	return 0;
+	 
+}
